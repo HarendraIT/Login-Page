@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>File Converter</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept="image/*, .pdf" required>
+        <select id="conversionType" required>
+            <option value="jpg">JPG</option>
+            <option value="pdf">PDF</option>
+            <!-- Add more options for other formats -->
+        </select>
+        <button type="button" onclick="convertFile()">Convert</button>
+    </form>
+    <div id="output"></div>
+    <script src="script.js"></script>
+</body>
+</html>

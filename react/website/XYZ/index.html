@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Image Converter</h1>
+    <form action="/convert" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg, .pdf" required>
+        <select name="conversion_type" required>
+            <option value="jpg_to_pdf">JPG to PDF</option>
+            <option value="pdf_to_jpg">PDF to JPG</option>
+        </select>
+        <button type="submit">Convert</button>
+    </form>
+</body>
+</html>

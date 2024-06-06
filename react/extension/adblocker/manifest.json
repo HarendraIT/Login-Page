@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Simple Ad Blocker",
+    "description": "Blocks ads on webpages",
+    "version": "1.0",
+    "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "storage",
+      "*://*.*/"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
